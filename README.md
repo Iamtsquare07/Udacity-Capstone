@@ -1,5 +1,5 @@
 # Capstone: Real Estate Marketplace
-* v1.0.0
+* v1.0.1
 * By Tsquare07
 
 ### Dependencies
@@ -53,3 +53,35 @@ migrate --reset
 # For running unit tests the contract, inside the development console, run:
 test
 ```
+# Deployment on rinkeby
+
+Run `truffle migrate --network rinkeby --reset --compile-all`
+
+* Deployed contracts on Rinkeby
+
+The following contracts provide the Zero-Knowledge proof process:
+
+* Verifier: `eth-contracts/contracts/SquareVerifier.sol`
+
+            `0xfAc43c172958326340C240A184c99050Dfd5d6C1`
+
+             https://rinkeby.etherscan.io/address/0xfAc43c172958326340C240A184c99050Dfd5d6C1
+
+* SolnSquareVerifier: `eth-contracts/contracts/SolnSquareVerifier.sol`
+
+            `0xEbC6b846064f7af155AA3551b5699016A8aDBFb7`
+
+            https://rinkeby.etherscan.io/address/0xEbC6b846064f7af155AA3551b5699016A8aDBFb7
+
+The SquareVerifier.sol contract is created using Zokrates, see below for details.
+
+# Contracts ABI
+
+Contracts' ABIs can be found in the following files:
+```
+eth-contracts/build/contracts/ERC721Mintable.json
+eth-contracts/build/contracts/SquareVerifier.json
+eth-contracts/build/contracts/SolnSquareVerifier.json
+```
+* OpenSea marketplace
+https://testnets.opensea.io/collection/real-estate-200899
